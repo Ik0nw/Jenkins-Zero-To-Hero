@@ -12,6 +12,7 @@ pipeline {
         //git branch: 'main', url: 'https://github.com/Ik0nw/Jenkins-Zero-To-Hero.git'
       }
     }
+  
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
@@ -46,6 +47,7 @@ pipeline {
         }
       }
     }
+    }
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
@@ -66,5 +68,4 @@ pipeline {
         }
     }
   }
-}
 }
